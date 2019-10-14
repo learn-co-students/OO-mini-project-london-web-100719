@@ -27,7 +27,8 @@ class User
     end
 
     def allergens
-        Allergy.all.select {|allergen| allergen.user == self }
+        allergen_list = Allergy.all.select {|allergen| allergen.user == self }
+        allergen_list.map {|allergy| allergy.ingredient}
     end
 
     def top_three_recipes
@@ -37,7 +38,8 @@ class User
     end
 
     def most_recent_recipe
-        recipes.max_by {|recipe_card| recipe_card.date} 
+        recipes.max_by {|recipe_card| recipe_card.date}
+        # goes by most recent date
     end
 
     # def safe_recipes

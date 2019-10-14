@@ -15,6 +15,7 @@ class Allergy
         @@all
     end
 
+    # my own helper function
     def self.allergens
         self.all.map {|allergy| allergy.ingredient}.uniq
     end

@@ -1,7 +1,7 @@
 # completed
 class Recipe
 
-    attr_accessor :recipe
+    attr_accessor :recipe # name
  
     @@all = []
 
