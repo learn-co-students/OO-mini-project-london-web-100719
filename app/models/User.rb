@@ -53,7 +53,7 @@ class User
 
     def top_three_recipes
 
-        self.recipe_cards.sort_by {|rc| -rc.rating}
+        self.recipe_cards.sort_by {|rc| -rc.rating}[0..2]
         
     end
 
