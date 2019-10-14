@@ -14,8 +14,8 @@ class Ingredient
     end
 
     def self.most_common_allergen
-        sorted_array =  Allergy.all.map {|obj| obj.ingredient}
-        sorted_array.max_by{|allergen| sorted_array.count(allergen)}
+        allergen_array =  Allergy.all.map {|allergen| allergen.ingredient}
+        allergen_array.max_by{|allergen| allergen_array.count(allergen)}
     end
 
 end

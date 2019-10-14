@@ -31,12 +31,12 @@ class User
         Allergy.all.select{|allergen| allergen.user == self}
     end
 
-
-
     def top_three_recipes
+        recipes.sort_by{|recipeCard| recipeCard.rating}[-3..-1]
     end
 
     def most_recent_recipe
+        recipes.sort_by{|recipeCard| recipeCard.date}[-1]
     end
 
 end

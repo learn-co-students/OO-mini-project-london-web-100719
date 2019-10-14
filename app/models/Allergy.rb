@@ -14,4 +14,8 @@ class Allergy
         @@all
     end
 
+    def self.unique_allergens
+        unique_allergies = self.all.map{|allergen| allergen.ingredient}.uniq
+    end
+
 end
