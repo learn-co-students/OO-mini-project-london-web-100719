@@ -6,6 +6,7 @@ class RecipeIngredient
     def initialize(recipe, ingredient)
         @recipe = recipe
         @ingredient = ingredient
+        @@all << self
     end
 
     def self.all

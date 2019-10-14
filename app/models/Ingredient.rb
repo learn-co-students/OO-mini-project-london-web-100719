@@ -14,7 +14,7 @@ class Ingredient
 
     def self.most_common_allergen
         all_allergens = Allergy.all.map {|allergy| allergy.ingredient.name}
-        all_allergens.max_by {|val| all_allergens.count(val)}
+        all_allergens.max_by {|item| all_allergens.count(item)}
     end
 
 end

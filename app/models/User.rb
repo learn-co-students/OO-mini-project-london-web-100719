@@ -17,9 +17,9 @@ class User
     end
 
     def recipes
-        self.user_recipes.map(&:recipe)
-        # The above is same as saying:
-        # self.user_recipes.map {|recipecard| recipecard.recipe}
+        self.user_recipes.map {|recipecard| recipecard.recipe}
+        # Alternative way of writing the above:
+        # self.user_recipes.map(&:recipe)
     end
 
     def add_recipe_card(date_of_entry, rating, recipe)
@@ -43,9 +43,3 @@ class User
     end
 
 end
-
-
-
-
-
-
